@@ -12,9 +12,9 @@ class LeapYearController
     {
         $leapyear = new LeapYear();
         if ($leapyear->isLeapYear($year)) {
-            return 'Yes, this is leap year! ';
+            return new Response('Yes, this is leap year!');
         }
 
-        return 'Nope, this is not a leap year.';
+        return new Response('Nope, this is not a leap year.');
     }
 }
